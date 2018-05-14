@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08540ABB20AA07D8000655DA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08540ABA20AA07D8000655DA /* SignUpViewController.swift */; };
+		08540ABD20AA0805000655DA /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08540ABC20AA0805000655DA /* ApplicationViewController.swift */; };
 		08B08CB420A9FA9800C321A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B08CB320A9FA9800C321A3 /* AppDelegate.swift */; };
 		08B08CB620A9FA9800C321A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B08CB520A9FA9800C321A3 /* ViewController.swift */; };
 		08B08CB920A9FA9800C321A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B08CB720A9FA9800C321A3 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08540ABA20AA07D8000655DA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		08540ABC20AA0805000655DA /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		08B08CB020A9FA9800C321A3 /* MobileAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B08CB320A9FA9800C321A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08B08CB520A9FA9800C321A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				08B08CBA20A9FA9900C321A3 /* Assets.xcassets */,
 				08B08CBC20A9FA9900C321A3 /* LaunchScreen.storyboard */,
 				08B08CBF20A9FA9A00C321A3 /* Info.plist */,
+				08540ABA20AA07D8000655DA /* SignUpViewController.swift */,
+				08540ABC20AA0805000655DA /* ApplicationViewController.swift */,
 			);
 			path = MobileAPI;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08540ABB20AA07D8000655DA /* SignUpViewController.swift in Sources */,
+				08540ABD20AA0805000655DA /* ApplicationViewController.swift in Sources */,
 				08B08CB620A9FA9800C321A3 /* ViewController.swift in Sources */,
 				08B08CB420A9FA9800C321A3 /* AppDelegate.swift in Sources */,
 			);
@@ -368,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DUBTEL.MobileAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.DUBTEL.MobileAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
