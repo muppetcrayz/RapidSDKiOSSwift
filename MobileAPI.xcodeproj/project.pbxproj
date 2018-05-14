@@ -15,6 +15,8 @@
 		08B08CBB20A9FA9900C321A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B08CBA20A9FA9900C321A3 /* Assets.xcassets */; };
 		08B08CBE20A9FA9900C321A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B08CBC20A9FA9900C321A3 /* LaunchScreen.storyboard */; };
 		08B08CC920A9FA9A00C321A3 /* MobileAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B08CC820A9FA9A00C321A3 /* MobileAPITests.swift */; };
+		08EC4AB020AA2442001E82F9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC4AAF20AA2442001E82F9 /* LoginResponse.swift */; };
+		08EC4AB220AA26E3001E82F9 /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EC4AB120AA26E3001E82F9 /* LogoutResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		08B08CC420A9FA9A00C321A3 /* MobileAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B08CC820A9FA9A00C321A3 /* MobileAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAPITests.swift; sourceTree = "<group>"; };
 		08B08CCA20A9FA9A00C321A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08EC4AAF20AA2442001E82F9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		08EC4AB120AA26E3001E82F9 /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				08B08CBF20A9FA9A00C321A3 /* Info.plist */,
 				08540ABA20AA07D8000655DA /* SignUpViewController.swift */,
 				08540ABC20AA0805000655DA /* ApplicationViewController.swift */,
+				08EC4AB120AA26E3001E82F9 /* LogoutResponse.swift */,
+				08EC4AAF20AA2442001E82F9 /* LoginResponse.swift */,
 			);
 			path = MobileAPI;
 			sourceTree = "<group>";
@@ -203,10 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EC4AB220AA26E3001E82F9 /* LogoutResponse.swift in Sources */,
 				08540ABB20AA07D8000655DA /* SignUpViewController.swift in Sources */,
 				08540ABD20AA0805000655DA /* ApplicationViewController.swift in Sources */,
 				08B08CB620A9FA9800C321A3 /* ViewController.swift in Sources */,
 				08B08CB420A9FA9800C321A3 /* AppDelegate.swift in Sources */,
+				08EC4AB020AA2442001E82F9 /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

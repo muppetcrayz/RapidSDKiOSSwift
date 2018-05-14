@@ -8,11 +8,13 @@
 
 import UIKit
 
+// this is base64 encoded apiKey:apiSecret for your specific application
+let token = "NGFiYzc1OThlMWYyOGUzOTRkNTdmNTAzOTZjOTJhMTYwNjcxYjU3NTc3NmVkMTBkODg1MjgxZWI5NGRiNzI1OTplYjFmMTAxZmU5NDNiNDE1MjZhZTFjNWU1NDA4OTgzNGJhZGJhYjgzNmU4N2Y3M2VlMWI2MDQ3ZTMwYTQxYzY4"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
