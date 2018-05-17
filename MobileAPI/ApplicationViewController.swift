@@ -44,6 +44,7 @@ class ApplicationViewController: UIViewController {
             do {
                 let jsonDecoder = JSONDecoder()
                 let responseJSON = try jsonDecoder.decode(LogoutResponse.self, from: unwrappedData)
+                print(responseJSON)
                 completion(responseJSON.status == "Success")
             } catch {
                 completion(false)

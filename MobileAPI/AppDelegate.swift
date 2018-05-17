@@ -8,8 +8,22 @@
 
 import UIKit
 
-// this is base64 encoded apiKey:apiSecret for your specific application
-let token = "NGFiYzc1OThlMWYyOGUzOTRkNTdmNTAzOTZjOTJhMTYwNjcxYjU3NTc3NmVkMTBkODg1MjgxZWI5NGRiNzI1OTplYjFmMTAxZmU5NDNiNDE1MjZhZTFjNWU1NDA4OTgzNGJhZGJhYjgzNmU4N2Y3M2VlMWI2MDQ3ZTMwYTQxYzY4"
+extension String {
+    var data:          Data  { return Data(utf8) }
+    var base64Encoded: Data  { return data.base64EncodedData() }
+    var base64Decoded: Data? { return Data(base64Encoded: self) }
+}
+
+
+extension Data {
+    var string: String? { return String(data: self, encoding: .utf8) }
+}
+
+let apiKey = "4abc7598e1f28e394d57f50396c92a160671b575776ed10d885281eb94db7259"
+let apiSecret = "eb1f101fe943b41526ae1c5e54089834badbab836e87f73ee1b6047e30a41c68";
+let variable = apiKey + ":" + apiSecret;
+let tokenData = variable.data
+let token = tokenData.base64EncodedString()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
