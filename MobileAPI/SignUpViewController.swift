@@ -63,8 +63,6 @@ class SignUpViewController: UIViewController {
         
     }
     
-    // okay what you still need to do is make it register and do fields required: something missing? pop up a thing. user already exists? pop up a thing. unable to register? pop up a thing. successful? do the segue.
-    
     @IBAction func submitPressed(_ sender: UIButton) {
         if (firstNameField.text?.isEmpty == false) && (lastNameField.text?.isEmpty == false) && (emailField.text?.isEmpty == false) && (passwordField.text?.isEmpty == false) {
             inputIsValid { valid in
@@ -77,8 +75,12 @@ class SignUpViewController: UIViewController {
                     DispatchQueue.main.async {
                         if (responseJSON.status == "Failed" && responseJSON.message == "User already exists for this application.") {
                             self.existsLabel.isHidden = false
+                            self.missingLabel.isHidden = true
+                            self.couldNotRegisterLabel.isHidden = true
                         }
                         else if (responseJSON.status == "Failed" && responseJSON.message == "Unable to register user to the application.") {
+                            self.existsLabel.isHidden = true
+                            self.missingLabel.isHidden = true
                             self.couldNotRegisterLabel.isHidden = false
                         }
                     }
@@ -86,7 +88,9 @@ class SignUpViewController: UIViewController {
             }
         }
         else {
+            self.existsLabel.isHidden = true
             self.missingLabel.isHidden = false
+            self.couldNotRegisterLabel.isHidden = true
         }
     }
     
