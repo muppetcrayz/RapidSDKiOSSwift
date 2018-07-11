@@ -75,6 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async {
                         self.incorrectLabel.isHidden = true
                         self.performSegue(withIdentifier: "loginSegue", sender: self)
+                        self.registerDevice()
                     }
                 }
                 else {
@@ -88,6 +89,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "logInToSignUpSegue", sender: self)
+    }
+    
+    func registerDevice() {
+        let authenticateString = "https://api.dubtel.com/v1/register_ios_device"
+        
+        var request = URLRequest(url: URL(string: authenticateString)!)
+        request.httpMethod = "POST"
+        
+        let postString = "session_id=" + session_id + "&devicetoken=" + device
+        
+        request.httpBody = postString.data(using: .utf8)
+        request.setValue("Basic \(token)", forHTTPHeaderField: "Authorization")
+        
+        // Create and run a URLSession data task with our JSON encoded POST request
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            guard let unwrappedData = data else { print("Error unwrapping data"); return }
+            
+            do {
+                let jsonDecoder = JSONDecoder()
+                let responseJSON = try jsonDecoder.decode(LoginResponse.self, from: unwrappedData)
+                print(responseJSON.status!)
+            } catch {
+                
+            }
+            
+        }
+        task.resume()
     }
     
 }
