@@ -15,5 +15,6 @@ Firstly, you must change the `token` located in the `AppDelegate.swift` file to 
 
 ## Authors
 * Sage Conger - [sagealessandra](https://github.com/sagealessandra)
+* John Opoku - [johnopoku](https://github.com/johnopoku)
 
 Powered by Dubtel Consulting, LLC.
