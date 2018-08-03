@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var request = URLRequest(url: URL(string: authenticateString)!)
         request.httpMethod = "POST"
         
-        let postString = "username=" + usernameField.text! + "&password=" + passwordField.text!
+        let postString = "email=" + usernameField.text! + "&password=" + passwordField.text!
         
         request.httpBody = postString.data(using: .utf8)
         request.setValue("Basic \(token)", forHTTPHeaderField: "Authorization")
